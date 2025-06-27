@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "xlocale": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xutility": "cpp",
+        "xiosbase": "cpp",
+        "system_error": "cpp",
+        "unordered_map": "cpp",
+        "xstring": "cpp",
+        "*.rh": "cpp",
+        "memory": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "iostream": "cpp",
+        "utility": "cpp",
+        "ostream": "cpp",
+        "iosfwd": "cpp",
+        "xhash": "cpp"
+    }
+}
