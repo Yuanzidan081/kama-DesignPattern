@@ -53,6 +53,7 @@
         "xfacet": "cpp",
         "xlocinfo": "cpp",
         "xstddef": "cpp",
-        "xtr1common": "cpp"
+        "xtr1common": "cpp",
+        "functional": "cpp"
     }
 }
