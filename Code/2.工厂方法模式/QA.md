@@ -86,4 +86,4 @@ classDiagram
 ```
 
 # 3. 代码实现说明
-+ `factory`: 工厂模式实现。
++ `factory.cpp`: 工厂模式实现。

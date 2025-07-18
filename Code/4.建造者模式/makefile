@@ -2,11 +2,11 @@ SHELL = cmd.exe
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -g
 
-tag_factory = factory
+tag_builder = builder
 
-# 工厂方法模式
-factory: $(tag_factory).o
-	$(CXX) $(CXXFLAGS) -o $(tag_factory) $(tag_factory).o
+# 建造者模式
+builder: $(tag_builder).o
+	$(CXX) $(CXXFLAGS) -o $(tag_builder) $(tag_builder).o
 
 $(objects): %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -18,5 +18,5 @@ clean:
 
 .PHONY: all
 all:
-	make $(tag_factory)
+	make $(tag_builder)
 

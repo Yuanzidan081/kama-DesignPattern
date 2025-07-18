@@ -35,7 +35,7 @@ singleton_lazy_funcStaticVariableRef: $(tag_lazy_funcStaticVariableRef).o
 
 
 
-$(objects_lazy): %.o: %.cpp
+$(objects): %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: clean

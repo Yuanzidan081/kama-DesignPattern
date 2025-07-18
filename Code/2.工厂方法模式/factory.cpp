@@ -98,13 +98,13 @@ public:
 };
 int main()
 {
-    int blockProductionCount;
-    cin >> blockProductionCount;
+    int N;
+    cin >> N;
 
     BlockFactorySystem blockFactorySystem;
     string blockType;
     int blockNumber;
-    while (blockProductionCount--)
+    while (N--)
     {
         cin >> blockType >> blockNumber;
 

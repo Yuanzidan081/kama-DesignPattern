@@ -8,8 +8,9 @@ tag_abstractFactory = abstractFactory
 abstractFactory: $(tag_abstractFactory).o
 	$(CXX) $(CXXFLAGS) -o $(tag_abstractFactory) $(tag_abstractFactory).o
 
-$(objects_lazy): %.o: %.cpp
+$(objects): %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 
 .PHONY: clean
 clean:
