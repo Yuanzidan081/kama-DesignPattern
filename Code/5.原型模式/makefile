@@ -2,11 +2,11 @@ SHELL = cmd.exe
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -g
 
-tag_builder = builder
+tag_prototype = prototype
 
 # 建造者模式
-builder: $(tag_builder).o
-	$(CXX) $(CXXFLAGS) -o $(tag_builder) $(tag_builder).o
+prototype: $(tag_prototype).o
+	$(CXX) $(CXXFLAGS) -o $(tag_prototype) $(tag_prototype).o
 
 .PHONY: clean
 clean:
@@ -14,5 +14,5 @@ clean:
 
 .PHONY: all
 all:
-	make $(tag_builder)
+	make $(tag_prototype)
 
