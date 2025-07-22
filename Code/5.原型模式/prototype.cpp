@@ -5,7 +5,7 @@ class Prototype
 {
 public:
     virtual ~Prototype() = default;
-    virtual Prototype *Clone() const = 0;
+    virtual Prototype *clonePrototype() const = 0;
     virtual void ShowInfo() const = 0;
 };
 
@@ -20,7 +20,7 @@ public:
     ~RectanglePrototype() = default;
     RectanglePrototype(const string &color, int width, int height)
         : m_color(color), m_width(width), m_height(height) {}
-    Prototype *Clone() const override
+    Prototype *clonePrototype() const override
     {
         return new RectanglePrototype(*this);
     }
@@ -40,9 +40,9 @@ int main()
     cin >> N;
     while (N--)
     {
-        Prototype *clone = prototype->Clone();
-        clone->ShowInfo();
-        delete clone;
+        Prototype *clonePrototype = prototype->clonePrototype();
+        clonePrototype->ShowInfo();
+        delete clonePrototype;
     }
     delete prototype;
     return 0;

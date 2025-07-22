@@ -27,3 +27,41 @@ Color: Red, Width: 10, Height: 5
 # 提示信息
 
 使用原型模式中的克隆方法实现矩形对象的创建。
+
+# 2. 设计UML图参考
+
+```mermaid
+classDiagram
+    direction LR
+    
+    %% 定义抽象原型类
+    class Prototype {
+        + ~Prototype()
+        + Prototype* Clone()
+        + void ShowInfo()
+    }
+    
+    %% 定义具体原型类
+    class RectanglePrototype {
+        - string m_color
+        - int m_width
+        - int m_height
+        + RectanglePrototype(const string&, int, int)
+        + Prototype* Clone() 
+        + void ShowInfo() 
+    }
+    
+    %% 定义继承关系
+    Prototype <|-- RectanglePrototype : 继承
+    
+    %% 定义依赖关系（来自main函数的使用）
+    class Client {
+        +main()
+    }
+    
+    Client --> Prototype : 使用
+```
+
+# 3. 代码实现说明
++ `prototype.cpp`: 原型模式实现。
+
